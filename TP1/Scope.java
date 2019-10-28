@@ -7,5 +7,6 @@ public class Scope {
 				System.out.print(i + ", ");
 			}
 			System.out.print("\n ");
+			/* Va afficher 5 valeurs suivi d'une virgule */
 	}
 }

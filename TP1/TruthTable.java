@@ -8,7 +8,7 @@ public class TruthTable {
 		int i = 0;
 		
 		for(i = 0; i < 5; i++) {
-			
+			/* Ici on réalise une boucle, qui, à chaque itération va modifier les valeurs a & b afin de les calculer et les afficher */
 			if (i == 0) {
 				System.out.println("  a" + "    " + " b" + "   " +"a and b"+"   "+"a or b"+"   "+"a xor b");
 			}
