@@ -1,0 +1,83 @@
+package com.LearningSoulsGame.Characters;
+import java.util.Scanner;
+
+public class Monster {
+	
+	private String name;
+	
+	private int life = 10;
+	
+	private int maxLife = 10;
+	
+	private int stamina = 10;
+	
+	private int maxStamina = 10;
+	
+	private static int instances_Count = 0;
+
+	public String getName() {
+		return name;
+	}
+	
+	public void setName(String newName) {
+		this.name = newName;
+	}
+	
+	public int getLife() {
+		return life;
+	}
+	
+	public void setLife(int newLife) {
+		this.life = newLife;
+	}
+	
+	public int getMaxLife() {
+		return maxLife;
+	}
+	
+	public void setMaxLife(int newMaxLife) {
+		this.maxLife = newMaxLife;
+	}
+
+	public int getStamina() {
+		return stamina;
+	}
+	
+	public void setStamina(int newStamina) {
+		this.stamina = newStamina;
+	}
+	
+	public int getMaxStamina() {
+		return maxStamina;
+	}
+	
+	public void setMaxStamina(int newMaxStamina) {
+		this.maxStamina = newMaxStamina;
+	}
+
+	public Monster() {
+		name = "Monster_"+instances_Count;
+	}
+	
+	public Monster(String name) {
+		instances_Count++;
+		this.name = name+"_"+instances_Count;
+	}
+	
+	public void printStats() {
+		System.out.println(this.toString());
+	}
+	
+	public String toString(){
+		return ("[ Monster ] "+name+"    LIFE: "+getLife()+"   STAMINA: "+ getStamina()+" ("+isAlive()+")"+"\t");
+	}
+	
+	public String isAlive() {
+		if(getLife() <= 0) {
+			return "DEAD";
+		}
+		else {
+			return "ALIVE";
+		}
+	}
+}
